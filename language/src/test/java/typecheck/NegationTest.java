@@ -2,8 +2,8 @@ package typecheck;
 
 import de.monticore.expressions.commonexpressions._ast.ASTEqualsExpression;
 import de.monticore.expressions.commonexpressions._ast.ASTLogicalNotExpression;
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintUsage;
-import de.monticore.lang.sysmlparts._ast.ASTPartUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTPartUsage;
 import de.monticore.lang.sysmlv2.SysMLv2Tool;
 import de.monticore.lang.sysmlv2._parser.SysMLv2Parser;
 import de.monticore.lang.sysmlv2.types.SysMLDeriver;

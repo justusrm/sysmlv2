@@ -1,8 +1,8 @@
 /* (c) https://github.com/MontiCore/monticore */
 package cocos;
 
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionUsageCoCo;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLModel;
 import de.monticore.lang.sysmlv2._cocos.SysMLv2CoCoChecker;
@@ -58,13 +58,13 @@ public class ActionCoCosTest {
 
         SysMLv2Mill.scopesGenitorDelegator().createFromAST(ast);
         var checker = new SysMLv2CoCoChecker();
-        checker.addCoCo((SysMLActionsASTActionDefCoCo) new ActionSupertypes());
-        checker.addCoCo((SysMLActionsASTActionDefCoCo) new ActionNameCoCos());
+        checker.addCoCo((SysMLBasisASTActionDefCoCo) new ActionSupertypes());
+        checker.addCoCo((SysMLBasisASTActionDefCoCo) new ActionNameCoCos());
 
-        checker.addCoCo((SysMLActionsASTActionUsageCoCo) new ActionGeneratorCoCos());
+        checker.addCoCo((SysMLBasisASTActionUsageCoCo) new ActionGeneratorCoCos());
 
-        checker.addCoCo((SysMLActionsASTActionUsageCoCo) new ActionSupertypes());
-        checker.addCoCo((SysMLActionsASTActionUsageCoCo) new ActionNameCoCos());
+        checker.addCoCo((SysMLBasisASTActionUsageCoCo) new ActionSupertypes());
+        checker.addCoCo((SysMLBasisASTActionUsageCoCo) new ActionNameCoCos());
         checker.checkAll(ast);
         assertTrue(Log.getFindings().isEmpty());
       }
@@ -78,7 +78,7 @@ public class ActionCoCosTest {
       ASTSysMLModel ast = SysMLv2Mill.parser().parse_String("action def B: A;").get();
       SysMLv2Mill.scopesGenitorDelegator().createFromAST(ast);
       var checker = new SysMLv2CoCoChecker();
-      checker.addCoCo((SysMLActionsASTActionDefCoCo) new ActionSupertypes());
+      checker.addCoCo((SysMLBasisASTActionDefCoCo) new ActionSupertypes());
       Log.enableFailQuick(false);
       checker.checkAll(ast);
       assertFalse(Log.getFindings().isEmpty());

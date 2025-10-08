@@ -1,7 +1,7 @@
 package typecheck;
 
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintUsage;
-import de.monticore.lang.sysmlparts._ast.ASTPartUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTPartUsage;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2.SysMLv2Tool;
 import de.monticore.lang.sysmlv2._parser.SysMLv2Parser;

@@ -1,8 +1,8 @@
 package parser;
 
 import de.monticore.expressions.expressionsbasis._ast.ASTNameExpression;
-import de.monticore.lang.sysmlexpressions._ast.ASTCalcDefPowerExpression;
-import de.monticore.lang.sysmlparts._ast.ASTAttributeUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTCalcDefPowerExpression;
+import de.monticore.lang.sysmlbasis._ast.ASTAttributeUsage;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2.SysMLv2Tool;
 import de.se_rwth.commons.logging.Log;

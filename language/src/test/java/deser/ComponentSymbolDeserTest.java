@@ -44,7 +44,7 @@ public class ComponentSymbolDeserTest extends NervigeSymboltableTests {
     assertThat(st).isEqualTo(
         "{\"generated-using\":\"www.MontiCore.de technology\",\"name\":\"A\","
             + "\"symbols\":"
-            + "[{\"kind\":\"de.monticore.lang.sysmlparts._symboltable"
+            + "[{\"kind\":\"de.monticore.lang.sysmlbasis._symboltable"
             + ".PartDefSymbol\",\"name\":\"A\","
             + "\"fullName\":\"A\","
             + "\"requirementType\":\"UNKNOWN\"}]}");

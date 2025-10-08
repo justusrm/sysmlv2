@@ -1,16 +1,15 @@
 package typecheck;
 
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintUsage;
-import de.monticore.lang.sysmlparts._ast.ASTAttributeUsage;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPortDef;
-import de.monticore.lang.sysmlstates._ast.ASTStateUsage;
-import de.monticore.lang.sysmlstates._ast.ASTSysMLTransition;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTAttributeUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPortDef;
+import de.monticore.lang.sysmlbasis._ast.ASTStateUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLTransition;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2.SysMLv2Tool;
 import de.monticore.lang.sysmlv2._parser.SysMLv2Parser;
 import de.monticore.lang.sysmlv2.types.SysMLDeriver;
-import de.monticore.symbols.basicsymbols.BasicSymbolsMill;
 import de.se_rwth.commons.logging.Log;
 import de.se_rwth.commons.logging.LogStub;
 import org.junit.jupiter.api.Assertions;

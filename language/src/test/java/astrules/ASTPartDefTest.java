@@ -1,7 +1,7 @@
 /* (c) https://github.com/MontiCore/monticore */
 package astrules;
 
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLModel;
 import de.se_rwth.commons.logging.LogStub;

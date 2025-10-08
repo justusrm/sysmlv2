@@ -3,9 +3,9 @@ package symboltable;
 
 import de.monticore.io.paths.MCPath;
 import de.monticore.lang.sysmlbasis._symboltable.SysMLTypeSymbol;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
-import de.monticore.lang.sysmlparts._symboltable.PortDefSymbol;
-import de.monticore.lang.sysmlparts._symboltable.PortUsageSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.PortDefSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.PortUsageSymbol;
 import de.monticore.lang.sysmlv2.SysMLv2Tool;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLModel;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2ArtifactScope;

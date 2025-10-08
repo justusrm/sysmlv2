@@ -1,14 +1,14 @@
 /* (c) https://github.com/MontiCore/monticore */
 package cocos;
 
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTConstraintDefCoCo;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTRequirementDefCoCo;
-import de.monticore.lang.sysmlimportsandpackages._cocos.SysMLImportsAndPackagesASTSysMLPackageCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTAttributeDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPortDefCoCo;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTConstraintDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTRequirementDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTSysMLPackageCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTAttributeDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPortDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateDefCoCo;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2.SysMLv2Tool;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLModel;
@@ -59,14 +59,14 @@ public class NameCompatible4IsabelleTest {
     assertThat(ast).isPresent();
 
     SysMLv2CoCoChecker checker = new SysMLv2CoCoChecker();
-    checker.addCoCo((SysMLStatesASTStateDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTPartDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTPortDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLConstraintsASTConstraintDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLActionsASTActionDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLConstraintsASTRequirementDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLImportsAndPackagesASTSysMLPackageCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTAttributeDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTStateDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTPartDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTPortDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTConstraintDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTActionDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTRequirementDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTSysMLPackageCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTAttributeDefCoCo) new NameCompatible4Isabelle());
     checker.checkAll(ast.get());
     assertTrue(Log.getFindings().isEmpty());
   }
@@ -87,14 +87,14 @@ public class NameCompatible4IsabelleTest {
     assertThat(ast).isPresent();
 
     SysMLv2CoCoChecker checker = new SysMLv2CoCoChecker();
-    checker.addCoCo((SysMLStatesASTStateDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTPartDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTPortDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLConstraintsASTConstraintDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLActionsASTActionDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLConstraintsASTRequirementDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLImportsAndPackagesASTSysMLPackageCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTAttributeDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTStateDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTPartDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTPortDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTConstraintDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTActionDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTRequirementDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTSysMLPackageCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTAttributeDefCoCo) new NameCompatible4Isabelle());
     checker.checkAll(ast.get());
 
     assertThat(Log.getFindings()).isNotEmpty();

@@ -36,7 +36,7 @@ public class SubcomponentSymbolDeserTest extends NervigeSymboltableTests {
             + "\"spannedScope\":{"
             + "\"symbols\":["
             + "{"
-            + "\"kind\":\"de.monticore.lang.sysmlparts._symboltable.PartUsageSymbol\","
+            + "\"kind\":\"de.monticore.lang.sysmlbasis._symboltable.PartUsageSymbol\","
             + "\"name\":\"b\","
             + "\"fullName\":\"A.b\","
             + "\"types\":["

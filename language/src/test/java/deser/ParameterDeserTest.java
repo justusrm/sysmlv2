@@ -47,7 +47,7 @@ public class ParameterDeserTest extends NervigeSymboltableTests {
             + "\"spannedScope\":{"
             + "\"symbols\":["
             + "{"
-            + "\"kind\":\"de.monticore.lang.sysmlparts._symboltable.AttributeUsageSymbol\","
+            + "\"kind\":\"de.monticore.lang.sysmlbasis._symboltable.AttributeUsageSymbol\","
             + "\"name\":\"p\","
             + "\"fullName\":\"A.p\","
             + "\"types\":["

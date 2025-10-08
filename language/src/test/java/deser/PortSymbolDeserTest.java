@@ -38,7 +38,7 @@ public class PortSymbolDeserTest extends NervigeSymboltableTests {
             + "\"spannedScope\":{"
             + "\"symbols\":["
             + "{"
-            + "\"kind\":\"de.monticore.lang.sysmlparts._symboltable.PortUsageSymbol\","
+            + "\"kind\":\"de.monticore.lang.sysmlbasis._symboltable.PortUsageSymbol\","
             + "\"name\":\"b\","
             + "\"fullName\":\"A.b\","
             + "\"types\":["

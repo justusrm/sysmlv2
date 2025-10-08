@@ -1,7 +1,7 @@
 package cocos;
 
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPortUsageCoCo;
-import de.monticore.lang.sysmlparts.coco.PortSpecializationsArePorts;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPortUsageCoCo;
+import de.monticore.lang.sysmlbasis.coco.PortSpecializationsArePorts;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLv2Node;
 import de.monticore.lang.sysmlv2._cocos.SysMLv2CoCoChecker;
 import de.se_rwth.commons.logging.Log;
@@ -28,7 +28,7 @@ public class PortSpecializationsArePortsTest extends NervigeSymboltableTests {
   public void testValidPortUsage() throws IOException {
     var as = process("port a: A; port def A; ");
     var checker = new SysMLv2CoCoChecker();
-    checker.addCoCo((SysMLPartsASTPortUsageCoCo) new PortSpecializationsArePorts());
+    checker.addCoCo((SysMLBasisASTPortUsageCoCo) new PortSpecializationsArePorts());
     Log.enableFailQuick(false);
     checker.checkAll((ASTSysMLv2Node) as.getAstNode());
     assertThat(Log.getFindings()).isEmpty();
@@ -38,7 +38,7 @@ public class PortSpecializationsArePortsTest extends NervigeSymboltableTests {
   public void testInvalidPortUsage() throws IOException {
     var as = process("port a: A; part def A; ");
     var checker = new SysMLv2CoCoChecker();
-    checker.addCoCo((SysMLPartsASTPortUsageCoCo) new PortSpecializationsArePorts());
+    checker.addCoCo((SysMLBasisASTPortUsageCoCo) new PortSpecializationsArePorts());
     Log.enableFailQuick(false);
     checker.checkAll((ASTSysMLv2Node) as.getAstNode());
     assertThat(Log.getFindings())
