@@ -1,17 +1,8 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang;
 
-grammar SysMLv2 extends SysMLExpressions,
-                        SysMLImportsAndPackages,
-                        SysMLActions,
-                        SysMLParts,
-                        SysMLStates,
-                        SysMLConstraints,
-                        SysMLConnections,
-                        SysMLOccurrences,
-                        SysMLViews,
-                        SysMLCases,
-                        ComponentConnector,
+grammar SysMLv2 extends ComponentConnector,
+                        SysMLBasis,
                         de.monticore.types.MCSimpleGenericTypes,
                         de.monticore.expressions.AssignmentExpressions,
                         de.monticore.expressions.StreamExpressions
