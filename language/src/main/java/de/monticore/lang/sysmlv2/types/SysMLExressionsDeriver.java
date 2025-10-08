@@ -1,38 +1,38 @@
 package de.monticore.lang.sysmlv2.types;
 
-import de.monticore.lang.sysmlexpressions._ast.ASTElementOfExpression;
-import de.monticore.lang.sysmlexpressions._ast.ASTInfinity;
-import de.monticore.lang.sysmlexpressions._ast.ASTSubsetEquationExpression;
-import de.monticore.lang.sysmlexpressions._ast.ASTSysMLInstantiation;
-import de.monticore.lang.sysmlexpressions._visitor.SysMLExpressionsHandler;
-import de.monticore.lang.sysmlexpressions._visitor.SysMLExpressionsTraverser;
-import de.monticore.lang.sysmlexpressions._visitor.SysMLExpressionsVisitor2;
+import de.monticore.lang.sysmlbasis._ast.ASTElementOfExpression;
+import de.monticore.lang.sysmlbasis._ast.ASTInfinity;
+import de.monticore.lang.sysmlbasis._ast.ASTSubsetEquationExpression;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLInstantiation;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisHandler;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisTraverser;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisVisitor2;
 import de.monticore.types.check.AbstractDeriveFromExpression;
 import de.monticore.types.check.SymTypeExpressionFactory;
 import de.monticore.types.check.SymTypeOfGenerics;
 import de.monticore.types.check.TypeCheckResult;
 import de.se_rwth.commons.logging.Log;
 
-public class SysMLExressionsDeriver extends AbstractDeriveFromExpression implements SysMLExpressionsVisitor2,
-    SysMLExpressionsHandler {
+public class SysMLExressionsDeriver extends AbstractDeriveFromExpression implements SysMLBasisVisitor2,
+    SysMLBasisHandler {
 
   /* ########################## HÄSSLICHER BOILERPLATE CODE START ########################## */
-  protected SysMLExpressionsTraverser traverser;
+  protected SysMLBasisTraverser traverser;
 
   protected SysMLSynthesizer synthesizer;
 
-  public SysMLExressionsDeriver(SysMLExpressionsTraverser traverser, SysMLSynthesizer synthesizer) {
+  public SysMLExressionsDeriver(SysMLBasisTraverser traverser, SysMLSynthesizer synthesizer) {
     this.traverser = traverser;
     this.synthesizer = synthesizer;
   }
 
   @Override
-  public SysMLExpressionsTraverser getTraverser() {
+  public SysMLBasisTraverser getTraverser() {
     return traverser;
   }
 
   @Override
-  public void setTraverser(SysMLExpressionsTraverser traverser) {
+  public void setTraverser(SysMLBasisTraverser traverser) {
     this.traverser = traverser;
   }
   /* ########################## HÄSSLICHER BOILERPLATE CODE ENDE ########################### */

@@ -2,7 +2,7 @@
 package de.monticore.lang.sysmlv2.types;
 
 import de.monticore.expressions.commonexpressions._ast.ASTFieldAccessExpression;
-import de.monticore.lang.sysmlexpressions.SysMLExpressionsMill;
+import de.monticore.lang.sysmlbasis.SysMLBasisMill;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2._visitor.SysMLv2Traverser;
 import de.monticore.ocl.types.check.DeriveSymTypeOfOCLExpressions;
@@ -34,7 +34,7 @@ public class SysMLDeriver extends AbstractDerive {
   }
 
   public SysMLDeriver(boolean isStream) {
-    super(SysMLExpressionsMill.traverser());
+    super(SysMLBasisMill.traverser());
     this.isStream = isStream;
     init();
   }
@@ -87,7 +87,7 @@ public class SysMLDeriver extends AbstractDerive {
 
     var deriverForSysMLExpressions = new SysMLExressionsDeriver(getTraverser(), synthesizer);
     deriverForSysMLExpressions.setTypeCheckResult(typeCheckResult);
-    getTraverser().add4SysMLExpressions(deriverForSysMLExpressions);
-    getTraverser().setSysMLExpressionsHandler(deriverForSysMLExpressions);
+    getTraverser().add4SysMLBasis(deriverForSysMLExpressions);
+    getTraverser().setSysMLBasisHandler(deriverForSysMLExpressions);
   }
 }

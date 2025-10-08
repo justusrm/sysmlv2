@@ -7,9 +7,9 @@ import de.monticore.expressions.expressionsbasis._symboltable.IExpressionsBasisS
 import de.monticore.lang.componentconnector._ast.ASTParameterValue;
 import de.monticore.lang.componentconnector._symboltable.IComponentConnectorScope;
 import de.monticore.lang.componentconnector._visitor.ComponentConnectorTraverser;
-import de.monticore.lang.sysmlparts._ast.ASTAttributeUsage;
-import de.monticore.lang.sysmlparts._symboltable.AttributeUsageSymbol;
-import de.monticore.lang.sysmlparts._symboltable.PartUsageSymbol;
+import de.monticore.lang.sysmlbasis._ast.ASTAttributeUsage;
+import de.monticore.lang.sysmlbasis._symboltable.AttributeUsageSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.PartUsageSymbol;
 import de.monticore.literals.mccommonliterals._symboltable.IMCCommonLiteralsScope;
 import de.monticore.literals.mcliteralsbasis._symboltable.IMCLiteralsBasisScope;
 import de.monticore.mcbasics._symboltable.IMCBasicsScope;

@@ -1,14 +1,15 @@
 package de.monticore.lang.sysmlv2.symboltable.completers;
 
-import de.monticore.lang.sysmlconstraints._symboltable.ISysMLConstraintsScope;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTSysMLReqType;
-import de.monticore.lang.sysmlparts._symboltable.ISysMLPartsScope;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
-import de.monticore.lang.sysmlparts._visitor.SysMLPartsVisitor2;
-import de.monticore.lang.sysmlstates._symboltable.ISysMLStatesScope;
+import de.monticore.lang.sysmlbasis._symboltable.ISysMLBasisScope;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLReqType;
+import de.monticore.lang.sysmlbasis._symboltable.ISysMLBasisScope;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.SysMLPartsScope;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisVisitor2;
+import de.monticore.lang.sysmlbasis._symboltable.ISysMLBasisScope;
 
-public class RequirementClassificationCompleter implements SysMLPartsVisitor2 {
+public class RequirementClassificationCompleter implements SysMLBasisVisitor2 {
 
   @Override
   public void endVisit(ASTPartDef node) {
@@ -50,21 +51,13 @@ public class RequirementClassificationCompleter implements SysMLPartsVisitor2 {
     return res != null ? res : ASTSysMLReqType.UNKNOWN;
   }
 
-  private ASTSysMLReqType getReqType(ISysMLPartsScope scope) {
+  private ASTSysMLReqType getReqType(ISysMLBasisScope scope) {
     var llr = false;
     var hlr = false;
 
-    if (scope instanceof ISysMLStatesScope) {
-      llr = ((ISysMLStatesScope) scope).getStateUsageSymbols().size() > 0;
-    }
-
-    if (scope instanceof ISysMLConstraintsScope) {
-      hlr = ((ISysMLConstraintsScope) scope).getRequirementUsageSymbols().size() > 0;
-    }
-
-    if (scope instanceof ISysMLConstraintsScope){
-      hlr = hlr || ((ISysMLConstraintsScope) scope).getConstraintUsageSymbols().size() > 0;
-    }
+    llr = !scope.getStateUsageSymbols().isEmpty();
+    hlr = !scope.getRequirementUsageSymbols().isEmpty();
+    hlr = hlr || !scope.getConstraintUsageSymbols().isEmpty();
 
     if (llr && hlr){
       return ASTSysMLReqType.MIXED;

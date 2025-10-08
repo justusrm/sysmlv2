@@ -2,12 +2,12 @@
 package de.monticore.lang.sysmlv2.cocos;
 
 import de.monticore.lang.sysmlbasis._ast.ASTSysMLElement;
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintUsage;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPartUsage;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlconstraints._ast.ASTRequirementUsage;
-import de.monticore.lang.sysmlstates._ast.ASTStateUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPartUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTRequirementUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTStateUsage;
 import de.se_rwth.commons.logging.Log;
 
 /**
@@ -20,7 +20,7 @@ import de.se_rwth.commons.logging.Log;
  * eine der drei genannten Verhaltensspezifikationen liegen muss. Diese CoCo prüft,
  * dass genau eine der drei vorhanden ist.
  */
-public class PartBehaviorCoCo implements SysMLPartsASTPartDefCoCo {
+public class PartBehaviorCoCo implements SysMLBasisASTPartDefCoCo {
 
   @Override
   public void check(ASTPartDef node) {

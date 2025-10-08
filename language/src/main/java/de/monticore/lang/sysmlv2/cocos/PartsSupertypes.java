@@ -1,14 +1,14 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPartUsage;
-import de.monticore.lang.sysmlparts._ast.ASTPortDef;
-import de.monticore.lang.sysmlparts._ast.ASTPortUsage;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartUsageCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPortDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPortUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPartUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTPortDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPortUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartUsageCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPortDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPortUsageCoCo;
 import de.monticore.types.mcbasictypes._ast.ASTMCType;
 import de.se_rwth.commons.logging.Log;
 
@@ -16,8 +16,8 @@ import java.util.stream.Collectors;
 
 // TODO Muss mit SpecialiationExists zusammenspielen, also darf der nicht anschlagen, wenn garkein Type existiert,
 // sondern nur, wenn zwar einer existiert, es aber keine PartsDef/PartsUsage ist
-public class PartsSupertypes implements SysMLPartsASTPartDefCoCo, SysMLPartsASTPartUsageCoCo, SysMLPartsASTPortDefCoCo,
-    SysMLPartsASTPortUsageCoCo {
+public class PartsSupertypes implements SysMLBasisASTPartDefCoCo, SysMLBasisASTPartUsageCoCo, SysMLBasisASTPortDefCoCo,
+    SysMLBasisASTPortUsageCoCo {
 
   private String printName(ASTMCType type) {
     return type.printType();

@@ -1,10 +1,10 @@
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlparts._ast.ASTConnectionUsage;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTSysMLReqType;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._ast.ASTConnectionUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLReqType;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
 import de.se_rwth.commons.SourcePositionBuilder;
 import de.se_rwth.commons.logging.Log;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class RefinementChainCheck implements SysMLPartsASTPartDefCoCo {
+public class RefinementChainCheck implements SysMLBasisASTPartDefCoCo {
 
   @Override
   public void check(ASTPartDef node) {

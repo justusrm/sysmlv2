@@ -1,20 +1,20 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlactions._ast.ASTActionDef;
-import de.monticore.lang.sysmlactions._ast.ASTActionUsage;
-import de.monticore.lang.sysmlactions._ast.ASTDecideAction;
-import de.monticore.lang.sysmlactions._ast.ASTForkAction;
-import de.monticore.lang.sysmlactions._ast.ASTJoinAction;
-import de.monticore.lang.sysmlactions._ast.ASTLoopActionUsage;
-import de.monticore.lang.sysmlactions._ast.ASTMergeAction;
-import de.monticore.lang.sysmlactions._ast.ASTSysMLFirstSuccession;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTActionDef;
+import de.monticore.lang.sysmlbasis._ast.ASTActionUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTDecideAction;
+import de.monticore.lang.sysmlbasis._ast.ASTForkAction;
+import de.monticore.lang.sysmlbasis._ast.ASTJoinAction;
+import de.monticore.lang.sysmlbasis._ast.ASTLoopActionUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTMergeAction;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLFirstSuccession;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionUsageCoCo;
 import de.monticore.lang.sysmlbasis._ast.ASTSysMLElement;
 import de.se_rwth.commons.logging.Log;
 
-public class ActionGeneratorCoCos implements SysMLActionsASTActionDefCoCo, SysMLActionsASTActionUsageCoCo {
+public class ActionGeneratorCoCos implements SysMLBasisASTActionDefCoCo, SysMLBasisASTActionUsageCoCo {
 
   /**
    * Check that all super types (specializations) exist. They need to be Action definitions.

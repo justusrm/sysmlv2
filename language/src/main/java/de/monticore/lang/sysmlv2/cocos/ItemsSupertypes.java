@@ -1,10 +1,10 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmloccurrences._ast.ASTItemDef;
-import de.monticore.lang.sysmloccurrences._ast.ASTItemUsage;
-import de.monticore.lang.sysmloccurrences._cocos.SysMLOccurrencesASTItemDefCoCo;
-import de.monticore.lang.sysmloccurrences._cocos.SysMLOccurrencesASTItemUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTItemDef;
+import de.monticore.lang.sysmlbasis._ast.ASTItemUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTItemDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTItemUsageCoCo;
 import de.monticore.types.mcbasictypes._ast.ASTMCType;
 import de.se_rwth.commons.logging.Log;
 
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 // TODO Muss mit SpecialiationExists zusammenspielen, also darf der nicht anschlagen, wenn garkein Type existiert,
 // sondern nur, wenn zwar einer existiert, es aber keine ItemsDef/ItemsUsage ist
-public class ItemsSupertypes implements SysMLOccurrencesASTItemDefCoCo, SysMLOccurrencesASTItemUsageCoCo {
+public class ItemsSupertypes implements SysMLBasisASTItemDefCoCo, SysMLBasisASTItemUsageCoCo {
 
   private String printName(ASTMCType type) {
     return type.printType();

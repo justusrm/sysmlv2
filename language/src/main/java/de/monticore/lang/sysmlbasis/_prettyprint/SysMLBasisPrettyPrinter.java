@@ -1,5 +1,8 @@
 package de.monticore.lang.sysmlbasis._prettyprint;
 
+import de.monticore.lang.sysmlbasis._ast.ASTSpecialization;
+import de.monticore.lang.sysmlbasis._ast.ASTSuccessionThen;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLElement;
 import de.monticore.lang.sysmlbasis._ast.ASTSysMLQualifiedName;
 import de.monticore.prettyprint.CommentPrettyPrinter;
 import de.monticore.prettyprint.IndentPrinter;
@@ -27,6 +30,40 @@ public class SysMLBasisPrettyPrinter extends SysMLBasisPrettyPrinterTOP {
         getPrinter().print(iter_name.next());
       }
     }
+    if (this.isPrintComments()) {
+      CommentPrettyPrinter.printPostComments(node, getPrinter());
+    }
+  }
+
+  // SysMlActionsPrettyPrinter
+  public void handle (ASTSuccessionThen node) {
+
+    if (this.isPrintComments()) {
+      CommentPrettyPrinter.printPreComments(node, getPrinter());
+    }
+
+    if (node.isPresentMCQualifiedName()) {
+      node.getMCQualifiedName().accept(getTraverser());
+
+      if (node.isPresentSysMLCardinality()) {
+        node.getSysMLCardinality().accept(getTraverser());
+      }
+
+      for (ASTSpecialization spec : node.getSpecializationList()) {
+        spec.accept(getTraverser());
+      }
+
+      getPrinter().print(" { ");
+      for (ASTSysMLElement e : node.getSysMLElementList()) {
+        e.accept(getTraverser());
+      }
+      getPrinter().print(" } ");
+
+    }
+    else if (node.sizeSysMLElements() == 1) {
+      node.getSysMLElement(0).accept(getTraverser());
+    }
+
     if (this.isPrintComments()) {
       CommentPrettyPrinter.printPostComments(node, getPrinter());
     }

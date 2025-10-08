@@ -1,10 +1,10 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlstates._ast.ASTStateDef;
-import de.monticore.lang.sysmlstates._ast.ASTStateUsage;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateDefCoCo;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTStateDef;
+import de.monticore.lang.sysmlbasis._ast.ASTStateUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateUsageCoCo;
 import de.monticore.types.mcbasictypes._ast.ASTMCType;
 import de.se_rwth.commons.logging.Log;
 
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 // TODO Muss mit SpecialiationExists zusammenspielen, also darf der nicht anschlagen, wenn garkein Type existiert,
 // sondern nur, wenn zwar einer existiert, es aber keine StateDef/StateUsage ist
-public class StateSupertypes implements SysMLStatesASTStateDefCoCo, SysMLStatesASTStateUsageCoCo {
+public class StateSupertypes implements SysMLBasisASTStateDefCoCo, SysMLBasisASTStateUsageCoCo {
 
   private String printName(ASTMCType type) {
     return type.printType();

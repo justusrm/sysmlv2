@@ -1,16 +1,16 @@
 package de.monticore.lang.sysmlv2.symboltable.completers;
 
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPortUsage;
-import de.monticore.lang.sysmlparts._ast.ASTSysMLCausality;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
-import de.monticore.lang.sysmlparts._visitor.SysMLPartsVisitor2;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPortUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLCausality;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisVisitor2;
 
 /**
  * Berechnet und vervollständigt die Kausalität der PortUsages
  * anhand der besitzenden (umliegenden) PartDefinition.
  */
-public class CausalityCompleter implements SysMLPartsVisitor2 {
+public class CausalityCompleter implements SysMLBasisVisitor2 {
   @Override
   public void visit(ASTPortUsage node) {
     if (node.getEnclosingScope().isPresentSpanningSymbol()) {

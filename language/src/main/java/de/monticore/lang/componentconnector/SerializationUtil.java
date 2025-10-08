@@ -1,8 +1,8 @@
 package de.monticore.lang.componentconnector;
 
 import de.monticore.lang.componentconnector._symboltable.*;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._visitor.SysMLPartsVisitor2;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisVisitor2;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2Scope;
 import de.monticore.symbols.basicsymbols._symboltable.BasicSymbolsSymbols2Json;
@@ -91,7 +91,7 @@ public class SerializationUtil {
   /**
    * Class extracts PartDefs as ComponentTypeSymbols and adds them to a new scope.
    */
-  public static class PartDefExtractor implements SysMLPartsVisitor2 {
+  public static class PartDefExtractor implements SysMLBasisVisitor2 {
     private ISysMLv2Scope artifact;
 
     public PartDefExtractor(ISysMLv2Scope artifact) {

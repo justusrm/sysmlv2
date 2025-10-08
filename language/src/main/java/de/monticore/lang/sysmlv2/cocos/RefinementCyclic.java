@@ -3,14 +3,13 @@ package de.monticore.lang.sysmlv2.cocos;
 import de.monticore.ast.ASTNode;
 import de.monticore.lang.sysmlbasis._ast.ASTSysMLRefinement;
 import de.monticore.lang.sysmlbasis._symboltable.SysMLTypeSymbol;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlv2.SysMLv2Mill;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
 import de.se_rwth.commons.logging.Log;
 
 import java.util.stream.Collectors;
 
-public class RefinementCyclic implements SysMLPartsASTPartDefCoCo {
+public class RefinementCyclic implements SysMLBasisASTPartDefCoCo {
 
   /**
    * Zykel in Verfeinerungen sind unerwünscht.

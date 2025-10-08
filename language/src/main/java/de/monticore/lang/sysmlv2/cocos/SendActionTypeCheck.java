@@ -1,10 +1,10 @@
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlactions._ast.ASTSendActionUsage;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTSendActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTSendActionUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTSendActionUsageCoCo;
 import de.monticore.lang.sysmlv2.types.SysMLDeriver;
 
-public class SendActionTypeCheck implements SysMLActionsASTSendActionUsageCoCo {
+public class SendActionTypeCheck implements SysMLBasisASTSendActionUsageCoCo {
 
   @Override
   public void check(ASTSendActionUsage node) {

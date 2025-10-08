@@ -1,9 +1,9 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPortUsage;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPortUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
 import de.se_rwth.commons.logging.Log;
 import java.util.List;
 
@@ -11,7 +11,7 @@ import java.util.List;
  * Eine sinnvoll modellierte Part sollte zur Außenweltkommunikation mindestens über ein
  * Port besitzen. Diese CoCo prüft, ob mind. ein Port innerhalb des Part-Scopes definiert wurde.
  */
-public class PortDefinitionExistsCoCo implements SysMLPartsASTPartDefCoCo {
+public class PortDefinitionExistsCoCo implements SysMLBasisASTPartDefCoCo {
   @Override
   public void check(ASTPartDef node) {
     List<ASTPortUsage> portUsages = node.getSysMLElements(ASTPortUsage.class);

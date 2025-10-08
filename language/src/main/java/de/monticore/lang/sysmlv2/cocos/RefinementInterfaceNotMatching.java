@@ -2,13 +2,13 @@ package de.monticore.lang.sysmlv2.cocos;
 
 import de.monticore.ast.ASTNode;
 import de.monticore.lang.sysmlbasis._ast.ASTSysMLRefinement;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
 import de.se_rwth.commons.logging.Log;
 
 import java.util.stream.Collectors;
 
-public class RefinementInterfaceNotMatching implements SysMLPartsASTPartDefCoCo {
+public class RefinementInterfaceNotMatching implements SysMLBasisASTPartDefCoCo {
 
   /**
    * Damit eine Verfeinerung funktionieren kann, müssen die Schnittstellen übereinstimmen,

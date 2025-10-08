@@ -2,20 +2,20 @@
 package de.monticore.lang.sysmlv2;
 
 import de.monticore.lang.componentconnector.SerializationUtil;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTConstraintDefCoCo;
-import de.monticore.lang.sysmlimportsandpackages._cocos.SysMLImportsAndPackagesASTSysMLPackageCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTAttributeDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPortDefCoCo;
-import de.monticore.lang.sysmlparts.coco.PortDefHasOneType;
-import de.monticore.lang.sysmlparts.coco.PortDefNeedsDirection;
-import de.monticore.lang.sysmlparts.symboltable.completers.ConvertEnumUsagesToFields;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTRequirementDefCoCo;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateDefCoCo;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateUsageCoCo;
-import de.monticore.lang.sysmlstates.cocos.NoDoActions;
-import de.monticore.lang.sysmlstates.cocos.NoExitActions;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTConstraintDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTSysMLPackageCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTAttributeDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPortDefCoCo;
+import de.monticore.lang.sysmlbasis.coco.PortDefHasOneType;
+import de.monticore.lang.sysmlbasis.coco.PortDefNeedsDirection;
+import de.monticore.lang.sysmlbasis.symboltable.completers.ConvertEnumUsagesToFields;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTRequirementDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateUsageCoCo;
+import de.monticore.lang.sysmlbasis.coco.NoDoActions;
+import de.monticore.lang.sysmlbasis.coco.NoExitActions;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLModel;
 import de.monticore.lang.sysmlv2._cocos.SysMLv2CoCoChecker;
 import de.monticore.lang.sysmlv2._prettyprint.SysMLv2FullPrettyPrinter;
@@ -100,8 +100,8 @@ public class SysMLv2Tool extends SysMLv2ToolTOP {
   @Override
   public void runDefaultCoCos(ASTSysMLModel ast) {
     var checker = new SysMLv2CoCoChecker();
-    checker.addCoCo((SysMLStatesASTStateDefCoCo) new StateSupertypes());
-    checker.addCoCo((SysMLStatesASTStateUsageCoCo) new StateSupertypes());
+    checker.addCoCo((SysMLBasisASTStateDefCoCo) new StateSupertypes());
+    checker.addCoCo((SysMLBasisASTStateUsageCoCo) new StateSupertypes());
     checker.addCoCo(new TypeCheckTransitionGuards());
     checker.addCoCo(new SendActionTypeCheck());
     checker.addCoCo(new AssignActionTypeCheck());
@@ -122,8 +122,8 @@ public class SysMLv2Tool extends SysMLv2ToolTOP {
 
     // Not-supported language elements
     checker.addCoCo(new NoExitActions());
-    checker.addCoCo((SysMLStatesASTStateDefCoCo) new NoDoActions());
-    checker.addCoCo((SysMLStatesASTStateUsageCoCo) new NoDoActions());
+    checker.addCoCo((SysMLBasisASTStateDefCoCo) new NoDoActions());
+    checker.addCoCo((SysMLBasisASTStateUsageCoCo) new NoDoActions());
 
     // Restrictions on language Elements
     checker.addCoCo(new OneCardinality());
@@ -135,19 +135,19 @@ public class SysMLv2Tool extends SysMLv2ToolTOP {
     checker.addCoCo(new WarnNonExhibited());
 
     // Check names to be compatible with Isabelle names
-    checker.addCoCo((SysMLStatesASTStateDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTPartDefCoCo) new NameCompatible4Isabelle());
-    checker.addCoCo((SysMLPartsASTPortDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTStateDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTPartDefCoCo) new NameCompatible4Isabelle());
+    checker.addCoCo((SysMLBasisASTPortDefCoCo) new NameCompatible4Isabelle());
     checker.addCoCo(
-        (SysMLConstraintsASTConstraintDefCoCo) new NameCompatible4Isabelle());
+        (SysMLBasisASTConstraintDefCoCo) new NameCompatible4Isabelle());
     checker.addCoCo(
-        (SysMLActionsASTActionDefCoCo) new NameCompatible4Isabelle());
+        (SysMLBasisASTActionDefCoCo) new NameCompatible4Isabelle());
     checker.addCoCo(
-        (SysMLConstraintsASTRequirementDefCoCo) new NameCompatible4Isabelle());
+        (SysMLBasisASTRequirementDefCoCo) new NameCompatible4Isabelle());
     checker.addCoCo(
-        (SysMLImportsAndPackagesASTSysMLPackageCoCo) new NameCompatible4Isabelle());
+        (SysMLBasisASTSysMLPackageCoCo) new NameCompatible4Isabelle());
     checker.addCoCo(
-        (SysMLPartsASTAttributeDefCoCo) new NameCompatible4Isabelle());
+        (SysMLBasisASTAttributeDefCoCo) new NameCompatible4Isabelle());
 
     // SpesML CoCos
     checker.addCoCo(new FlowCheckCoCo());
@@ -185,9 +185,9 @@ public class SysMLv2Tool extends SysMLv2ToolTOP {
     SysMLv2Traverser traverser = SysMLv2Mill.inheritanceTraverser();
     traverser.add4SysMLBasis(new SpecializationCompleter());
     traverser.add4SysMLBasis(new DirectionCompleter());
-    traverser.add4SysMLParts(new DirectionCompleter());
-    traverser.add4SysMLParts(new ConvertEnumUsagesToFields());
-    traverser.add4SysMLParts(new IdentifierCompletion());
+    traverser.add4SysMLBasis(new DirectionCompleter());
+    traverser.add4SysMLBasis(new ConvertEnumUsagesToFields());
+    traverser.add4SysMLBasis(new IdentifierCompletion());
 
     // Visiting artifact scope _and_ the AST requires two calls
     if (node.getEnclosingScope() != null) {
@@ -200,13 +200,13 @@ public class SysMLv2Tool extends SysMLv2ToolTOP {
     traverser = SysMLv2Mill.traverser();
     TypesCompleter completer = new TypesCompleter();
     traverser.add4SysMLBasis(completer);
-    traverser.add4SysMLParts(completer);
-    traverser.add4SysMLConstraints(completer);
+    traverser.add4SysMLBasis(completer);
+    traverser.add4SysMLBasis(completer);
 
-    traverser.add4SysMLParts(new RequirementClassificationCompleter());
-    traverser.add4SysMLParts(new DirectRefinementCompleter());
-    traverser.add4SysMLParts(new CausalityCompleter());
-    traverser.add4SysMLStates(new StateUsageCompleter());
+    traverser.add4SysMLBasis(new RequirementClassificationCompleter());
+    traverser.add4SysMLBasis(new DirectRefinementCompleter());
+    traverser.add4SysMLBasis(new CausalityCompleter());
+    traverser.add4SysMLBasis(new StateUsageCompleter());
 
     // Visiting artifact scope _and_ the AST requires two calls
     if (node.getEnclosingScope() != null) {
@@ -393,7 +393,7 @@ public class SysMLv2Tool extends SysMLv2ToolTOP {
         var artifact = SysMLv2Mill.artifactScope();
         var extractor = new SerializationUtil.PartDefExtractor(artifact);
         var traverser = getTraverser();
-        traverser.add4SysMLParts(extractor);
+        traverser.add4SysMLBasis(extractor);
         asts.stream().forEach(s -> s.accept(traverser));
 
         // Store to file

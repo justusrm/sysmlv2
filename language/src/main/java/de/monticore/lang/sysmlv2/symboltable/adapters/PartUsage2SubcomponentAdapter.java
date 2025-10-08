@@ -3,7 +3,7 @@ package de.monticore.lang.sysmlv2.symboltable.adapters;
 import com.google.common.base.Preconditions;
 import de.monticore.lang.componentconnector._ast.ASTParameterValue;
 import de.monticore.lang.componentconnector._symboltable.MildInstanceSymbol;
-import de.monticore.lang.sysmlparts._symboltable.PartUsageSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.PartUsageSymbol;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2Scope;
 import de.monticore.types.check.CompKindExpression;
 import de.monticore.types.check.CompKindOfComponentType;

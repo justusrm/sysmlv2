@@ -2,15 +2,15 @@
 package de.monticore.lang.sysmlv2.cocos;
 
 import de.monticore.expressions.expressionsbasis._ast.ASTExpression;
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintUsage;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTConstraintUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTConstraintUsageCoCo;
 import de.monticore.lang.sysmlv2.types.SysMLDeriver;
 import de.monticore.types.check.TypeCheckResult;
 import de.se_rwth.commons.SourcePosition;
 import de.se_rwth.commons.SourcePositionBuilder;
 import de.se_rwth.commons.logging.Log;
 
-public class ConstraintIsBoolean implements SysMLConstraintsASTConstraintUsageCoCo {
+public class ConstraintIsBoolean implements SysMLBasisASTConstraintUsageCoCo {
 
   @Override public void check(ASTConstraintUsage node) {
     // Expression ausgraben

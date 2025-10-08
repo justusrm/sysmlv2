@@ -1,13 +1,13 @@
 package de.monticore.lang.sysmlv2.cocos;
 
 import de.monticore.expressions.expressionsbasis._ast.ASTExpression;
-import de.monticore.lang.sysmlstates._ast.ASTSysMLTransition;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTSysMLTransitionCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLTransition;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTSysMLTransitionCoCo;
 import de.monticore.lang.sysmlv2.types.SysMLDeriver;
 import de.monticore.types.check.TypeCheckResult;
 import de.se_rwth.commons.logging.Log;
 
-public class TypeCheckTransitionGuards implements SysMLStatesASTSysMLTransitionCoCo {
+public class TypeCheckTransitionGuards implements SysMLBasisASTSysMLTransitionCoCo {
 
   @Override
   public void check(ASTSysMLTransition node) {

@@ -1,13 +1,13 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlactions._ast.ASTActionDef;
-import de.monticore.lang.sysmlactions._ast.ASTActionUsage;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTActionDef;
+import de.monticore.lang.sysmlbasis._ast.ASTActionUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionUsageCoCo;
 import de.se_rwth.commons.logging.Log;
 
-public class ActionNameCoCos implements SysMLActionsASTActionDefCoCo, SysMLActionsASTActionUsageCoCo {
+public class ActionNameCoCos implements SysMLBasisASTActionDefCoCo, SysMLBasisASTActionUsageCoCo {
 
 
   /**

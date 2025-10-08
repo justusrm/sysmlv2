@@ -1,13 +1,13 @@
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlactions._ast.ASTAssignmentActionUsage;
-import de.monticore.lang.sysmlactions._ast.ASTSendActionUsage;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTAssignmentActionUsageCoCo;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTSendActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTAssignmentActionUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTSendActionUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTAssignmentActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTSendActionUsageCoCo;
 import de.monticore.lang.sysmlv2.types.SysMLDeriver;
 import de.monticore.types.check.TypeCheck;
 
-public class AssignActionTypeCheck implements SysMLActionsASTAssignmentActionUsageCoCo {
+public class AssignActionTypeCheck implements SysMLBasisASTAssignmentActionUsageCoCo {
 
   @Override
   public void check(ASTAssignmentActionUsage node) {

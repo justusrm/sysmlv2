@@ -1,6 +1,6 @@
 package de.monticore.lang.sysmlv2.symboltable.adapters;
 
-import de.monticore.lang.sysmlparts._symboltable.EnumUsageSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.EnumUsageSymbol;
 import de.monticore.symbols.oosymbols._symboltable.FieldSymbol;
 import de.monticore.symbols.oosymbols._symboltable.OOTypeSymbol;
 import de.monticore.types.check.SymTypeExpression;

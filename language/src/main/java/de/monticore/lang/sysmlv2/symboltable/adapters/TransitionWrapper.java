@@ -9,7 +9,7 @@ import de.monticore.lang.componentconnector._ast.ASTConfiguration;
 import de.monticore.lang.componentconnector._ast.ASTTransition;
 import de.monticore.lang.componentconnector._symboltable.IComponentConnectorScope;
 import de.monticore.lang.componentconnector._visitor.ComponentConnectorTraverser;
-import de.monticore.lang.sysmlstates._ast.ASTSysMLTransition;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLTransition;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2Scope;
 import de.monticore.literals.mccommonliterals._ast.ASTBooleanLiteralBuilder;
 import de.monticore.literals.mccommonliterals._ast.ASTConstantsMCCommonLiterals;

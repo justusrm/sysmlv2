@@ -1,30 +1,30 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlactions._ast.ASTActionDef;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintDef;
-import de.monticore.lang.sysmlconstraints._ast.ASTRequirementDef;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTConstraintDefCoCo;
-import de.monticore.lang.sysmlconstraints._cocos.SysMLConstraintsASTRequirementDefCoCo;
-import de.monticore.lang.sysmlimportsandpackages._ast.ASTSysMLPackage;
-import de.monticore.lang.sysmlimportsandpackages._cocos.SysMLImportsAndPackagesASTSysMLPackageCoCo;
-import de.monticore.lang.sysmlparts._ast.ASTAttributeDef;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPortDef;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTAttributeDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPartDefCoCo;
-import de.monticore.lang.sysmlparts._cocos.SysMLPartsASTPortDefCoCo;
-import de.monticore.lang.sysmlstates._ast.ASTStateDef;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTActionDef;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintDef;
+import de.monticore.lang.sysmlbasis._ast.ASTRequirementDef;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTConstraintDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTRequirementDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLPackage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTSysMLPackageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTAttributeDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPortDef;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTAttributeDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPartDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTPortDefCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTStateDef;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateDefCoCo;
 import de.se_rwth.commons.SourcePosition;
 import de.se_rwth.commons.logging.Log;
 
-public class NameCompatible4Isabelle implements SysMLStatesASTStateDefCoCo,
-    SysMLPartsASTPartDefCoCo, SysMLPartsASTPortDefCoCo, SysMLConstraintsASTConstraintDefCoCo,
-    SysMLPartsASTAttributeDefCoCo, SysMLActionsASTActionDefCoCo,
-    SysMLConstraintsASTRequirementDefCoCo,
-    SysMLImportsAndPackagesASTSysMLPackageCoCo {
+public class NameCompatible4Isabelle implements SysMLBasisASTStateDefCoCo,
+    SysMLBasisASTPartDefCoCo, SysMLBasisASTPortDefCoCo, SysMLBasisASTConstraintDefCoCo,
+    SysMLBasisASTAttributeDefCoCo, SysMLBasisASTActionDefCoCo,
+    SysMLBasisASTRequirementDefCoCo,
+    SysMLBasisASTSysMLPackageCoCo {
   //check for name
   private void LogsCompatible4Isabelle(String name, SourcePosition start, SourcePosition end) {
     if(!name.matches("^(?!0-9)[a-zA-Z0-9_]+$") && !name.isEmpty()) {

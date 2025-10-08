@@ -1,7 +1,7 @@
 package de.monticore.lang.sysmlv2.symboltable.completers;
 
-import de.monticore.lang.sysmlparts._ast.ASTPartUsage;
-import de.monticore.lang.sysmlparts._visitor.SysMLPartsVisitor2;
+import de.monticore.lang.sysmlbasis._ast.ASTPartUsage;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisVisitor2;
 
 /**
  * Completes SysMLIdentifier information in the symbol table. This is because
@@ -11,7 +11,7 @@ import de.monticore.lang.sysmlparts._visitor.SysMLPartsVisitor2;
  *
  * Example: The SysMLIdentifier for `part <P1> part1;` ist "P1".
  */
-public class IdentifierCompletion implements SysMLPartsVisitor2 {
+public class IdentifierCompletion implements SysMLBasisVisitor2 {
 
   /**
    * Completes identifier

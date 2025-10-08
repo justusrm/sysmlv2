@@ -1,10 +1,10 @@
 /* (c) https://github.com/MontiCore/monticore */
 package de.monticore.lang.sysmlv2.cocos;
 
-import de.monticore.lang.sysmlactions._ast.ASTActionDef;
-import de.monticore.lang.sysmlactions._ast.ASTActionUsage;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionDefCoCo;
-import de.monticore.lang.sysmlactions._cocos.SysMLActionsASTActionUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTActionDef;
+import de.monticore.lang.sysmlbasis._ast.ASTActionUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionDefCoCo;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTActionUsageCoCo;
 import de.monticore.types.mcbasictypes._ast.ASTMCType;
 import de.se_rwth.commons.logging.Log;
 
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 
 // TODO Muss mit SpecialiationExists zusammenspielen, also darf der nicht anschlagen, wenn garkein Type existiert,
 // sondern nur, wenn zwar einer existiert, es aber keine ActionDef/ActionUsage ist
-public class ActionSupertypes implements SysMLActionsASTActionDefCoCo, SysMLActionsASTActionUsageCoCo {
+public class ActionSupertypes implements SysMLBasisASTActionDefCoCo, SysMLBasisASTActionUsageCoCo {
 
   private String printName(ASTMCType type) {
     return type.printType();

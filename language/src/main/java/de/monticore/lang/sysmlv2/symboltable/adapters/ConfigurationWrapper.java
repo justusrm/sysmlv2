@@ -9,13 +9,12 @@ import de.monticore.lang.componentconnector._ast.ASTOutput;
 import de.monticore.lang.componentconnector._ast.ASTState;
 import de.monticore.lang.componentconnector._symboltable.IComponentConnectorScope;
 import de.monticore.lang.componentconnector._visitor.ComponentConnectorTraverser;
-import de.monticore.lang.sysmlactions._ast.ASTActionUsage;
-import de.monticore.lang.sysmlactions._ast.ASTSysMLActionsNode;
-import de.monticore.lang.sysmlactions._symboltable.ISysMLActionsScope;
+import de.monticore.lang.sysmlbasis._ast.ASTActionUsage;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLBasisNode;
+import de.monticore.lang.sysmlbasis.visitors.SendActionAssignmentsVisitor;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2._prettyprint.SysMLv2FullPrettyPrinter;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2Scope;
-import de.monticore.lang.sysmlactions.visitors.SendActionAssignmentsVisitor;
 import de.monticore.literals.mccommonliterals._symboltable.IMCCommonLiteralsScope;
 import de.monticore.literals.mcliteralsbasis._symboltable.IMCLiteralsBasisScope;
 import de.monticore.mcbasics._symboltable.IMCBasicsScope;
@@ -48,12 +47,12 @@ public class ConfigurationWrapper implements ASTConfiguration {
   /** Caching because of internal deriver usage*/
   private final List<ASTOutput> outputs;
 
-  public ConfigurationWrapper(String state, ASTSysMLActionsNode adaptee) {
+  public ConfigurationWrapper(String state, ASTSysMLBasisNode adaptee) {
     this.enclosingScope = (ISysMLv2Scope) adaptee.getEnclosingScope();
 
     var traverser = SysMLv2Mill.traverser();
     var collector = new SendActionAssignmentsVisitor();
-    traverser.add4SysMLActions(collector);
+    traverser.add4SysMLBasis(collector);
     if (adaptee != null) {
       adaptee.accept(traverser);
     }

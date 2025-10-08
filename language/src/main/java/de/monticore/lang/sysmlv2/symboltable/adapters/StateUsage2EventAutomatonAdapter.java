@@ -3,10 +3,10 @@ package de.monticore.lang.sysmlv2.symboltable.adapters;
 import de.monticore.lang.componentconnector._ast.ASTConfiguration;
 import de.monticore.lang.componentconnector._ast.ASTTransition;
 import de.monticore.lang.componentconnector._symboltable.EventAutomatonSymbol;
-import de.monticore.lang.sysmlactions._ast.ASTSysMLSuccession;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
-import de.monticore.lang.sysmlstates._ast.ASTSysMLTransition;
-import de.monticore.lang.sysmlstates._symboltable.StateUsageSymbol;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLSuccession;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLTransition;
+import de.monticore.lang.sysmlbasis._symboltable.StateUsageSymbol;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2Scope;
 import de.monticore.types.mcbasictypes._ast.ASTMCQualifiedType;
 

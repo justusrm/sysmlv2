@@ -2,9 +2,9 @@
 package de.monticore.lang.sysmlv2.cocos;
 
 import de.monticore.ast.ASTNode;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlstates._ast.ASTStateUsage;
-import de.monticore.lang.sysmlstates._cocos.SysMLStatesASTStateUsageCoCo;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTStateUsage;
+import de.monticore.lang.sysmlbasis._cocos.SysMLBasisASTStateUsageCoCo;
 import de.se_rwth.commons.logging.Log;
 
 /**
@@ -23,7 +23,7 @@ import de.se_rwth.commons.logging.Log;
  * }
  * </code>
  */
-public class WarnNonExhibited implements SysMLStatesASTStateUsageCoCo {
+public class WarnNonExhibited implements SysMLBasisASTStateUsageCoCo {
 
   private int depth = 0;
 
@@ -51,13 +51,13 @@ public class WarnNonExhibited implements SysMLStatesASTStateUsageCoCo {
 
   @Override
   public void visit(ASTStateUsage node) {
-    SysMLStatesASTStateUsageCoCo.super.visit(node);
+    SysMLBasisASTStateUsageCoCo.super.visit(node);
     depth++;
   }
 
   @Override
   public void endVisit(ASTStateUsage node) {
-    SysMLStatesASTStateUsageCoCo.super.endVisit(node);
+    SysMLBasisASTStateUsageCoCo.super.endVisit(node);
     depth--;
   }
 
