@@ -2,9 +2,9 @@ package de.monticore.lang.sysmlv2._lsp.features.code_action;
 
 import de.mclsg.lsp.document_management.DocumentInformation;
 import de.mclsg.lsp.document_management.DocumentManager;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
-import de.monticore.lang.sysmlparts._visitor.SysMLPartsVisitor2;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._visitor.SysMLBasisVisitor2;
 import de.monticore.lang.sysmlv2.SysMLv2Mill;
 import de.monticore.lang.sysmlv2._ast.ASTSysMLModel;
 import de.monticore.lang.sysmlv2._lsp.features.code_action.utils.DocumentUtils;
@@ -89,7 +89,7 @@ public class MissingRefiner extends CoCoCodeActionProvider {
     var partDefToDocument = new HashMap<ASTPartDef, DocumentInformation>();
     documentManager.getAllDocumentInformation(d -> true).forEach(d -> {
       var traverser = SysMLv2Mill.traverser();
-      traverser.add4SysMLParts(new SysMLPartsVisitor2() {
+      traverser.add4SysMLBasis(new SysMLBasisVisitor2() {
         @Override
         public void visit(ASTPartDef node) {
           partDefToDocument.put(node, d);

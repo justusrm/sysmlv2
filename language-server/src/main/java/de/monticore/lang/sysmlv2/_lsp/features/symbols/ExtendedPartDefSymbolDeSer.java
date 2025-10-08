@@ -1,10 +1,9 @@
 package de.monticore.lang.sysmlv2._lsp.features.symbols;
 
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbol;
-import de.monticore.lang.sysmlparts._symboltable.PartDefSymbolDeSer;
-import de.monticore.lang.sysmlparts._symboltable.SysMLPartsSymbols2Json;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbol;
+import de.monticore.lang.sysmlbasis._symboltable.PartDefSymbolDeSer;
+import de.monticore.lang.sysmlbasis._symboltable.SysMLBasisSymbols2Json;
 import de.monticore.lang.sysmlv2._lsp.language_access.SysMLv2ScopeManager;
-import de.monticore.lang.sysmlv2.types.SysMLSynthesizer;
 import de.monticore.symboltable.serialization.JsonPrinter;
 import de.monticore.types.check.SymTypeExpression;
 import de.monticore.types.check.SymTypeExpressionDeSer;
@@ -17,7 +16,7 @@ import java.util.stream.Collectors;
 public class ExtendedPartDefSymbolDeSer extends PartDefSymbolDeSer {
 
   @Override
-  public String serialize(PartDefSymbol toSerialize, SysMLPartsSymbols2Json s2j) {
+  public String serialize(PartDefSymbol toSerialize, SysMLBasisSymbols2Json s2j) {
     JsonPrinter p = s2j.getJsonPrinter();
     p.beginObject();
     p.member(de.monticore.symboltable.serialization.JsonDeSers.KIND, getSerializedKind());
@@ -48,7 +47,7 @@ public class ExtendedPartDefSymbolDeSer extends PartDefSymbolDeSer {
     return p.toString();
   }
 
-  protected void serialize(String key, List<PartDefSymbol> symbolsToStore, SysMLPartsSymbols2Json s2j) {
+  protected void serialize(String key, List<PartDefSymbol> symbolsToStore, SysMLBasisSymbols2Json s2j) {
     var validRefinementExpressions = symbolsToStore.stream()
         .map(this::getSymTypeExpressionOfSymbol)
         .filter(Optional::isPresent)

@@ -5,13 +5,13 @@ import com.google.common.collect.ImmutableMap;
 import de.mclsg.lsp.document_management.DocumentInformation;
 import de.mclsg.lsp.document_management.DocumentManager;
 import de.mclsg.lsp.features.DocumentSymbolProvider;
-import de.monticore.lang.sysmlconstraints._ast.ASTConstraintDef;
-import de.monticore.lang.sysmlimportsandpackages._ast.ASTSysMLPackage;
-import de.monticore.lang.sysmlparts._ast.ASTEnumDef;
-import de.monticore.lang.sysmlparts._ast.ASTPartDef;
-import de.monticore.lang.sysmlparts._ast.ASTPortDef;
-import de.monticore.lang.sysmlparts._symboltable.SysMLPartsSymbols2Json;
-import de.monticore.lang.sysmlstates._ast.ASTStateDef;
+import de.monticore.lang.sysmlbasis._ast.ASTConstraintDef;
+import de.monticore.lang.sysmlbasis._ast.ASTSysMLPackage;
+import de.monticore.lang.sysmlbasis._ast.ASTEnumDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPartDef;
+import de.monticore.lang.sysmlbasis._ast.ASTPortDef;
+import de.monticore.lang.sysmlbasis._symboltable.SysMLBasisSymbols2Json;
+import de.monticore.lang.sysmlbasis._ast.ASTStateDef;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2ArtifactScope;
 import de.monticore.lang.sysmlv2._symboltable.ISysMLv2Scope;
 import de.monticore.lang.sysmlv2._symboltable.SysMLv2Symbols2Json;
@@ -95,15 +95,15 @@ public class SysMLv2DocumentSymbolProvider extends SysMLv2DocumentSymbolProvider
   private List<DocumentSymbol> loadSymbolsToTree(final List<ISymbol> allSymbols, List<ISymbol> activeSymbols) {
 
     var toJson = new SysMLv2Symbols2Json();
-    toJson.getTraverser().getSysMLPartsVisitorList().clear();
-    var toJsonParts = new SysMLPartsSymbols2Json(toJson.getTraverser(), toJson.getJsonPrinter()) {
+    toJson.getTraverser().getSysMLBasisVisitorList().clear();
+    var toJsonParts = new SysMLBasisSymbols2Json(toJson.getTraverser(), toJson.getJsonPrinter()) {
       @Override
       public void init(){
         super.init();
         partDefSymbolDeSer = new ExtendedPartDefSymbolDeSer();
       }
     };
-    toJson.getTraverser().add4SysMLParts(toJsonParts);
+    toJson.getTraverser().add4SysMLBasis(toJsonParts);
 
     return activeSymbols.stream().map(symbol ->
         new DocumentSymbol(
