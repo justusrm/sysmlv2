@@ -3,7 +3,7 @@
   "name": "RoughPartDef",
   "symbols": [
     {
-      "kind": "de.monticore.lang.sysmlimportsandpackages._symboltable.SysMLPackageSymbol",
+      "kind": "de.monticore.lang.sysmlbasis._symboltable.SysMLPackageSymbol",
       "name": "RoughPartDef",
       "fullName":"RoughPartDef",
       "spannedScope": {
@@ -15,6 +15,11 @@
             "requirementType": "HLR",
             "spannedScope": {
               "symbols": [
+                {
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.ConstraintUsageSymbol",
+                  "name": "SomeName",
+                  "fullName":"RoughPartDef.B.SomeName"
+                },
                 {
                   "kind": "de.monticore.lang.sysmlbasis._symboltable.PortUsageSymbol",
                   "name": "input",
@@ -38,11 +43,6 @@
                     }
                   ],
                   "strong": true
-                },
-                {
-                  "kind": "de.monticore.lang.sysmlconstraints._symboltable.ConstraintUsageSymbol",
-                  "name": "SomeName",
-                  "fullName":"RoughPartDef.B.SomeName"
                 }
               ]
             }
@@ -54,7 +54,7 @@
             "spannedScope": {
               "symbols": [
                 {
-                  "kind": "de.monticore.lang.sysmlparts._symboltable.AttributeUsageSymbol",
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.AttributeUsageSymbol",
                   "name": "val",
                   "fullName":"RoughPartDef.BooleanInput.val",
                   "types": [
@@ -75,7 +75,7 @@
             "spannedScope": {
               "symbols": [
                 {
-                  "kind": "de.monticore.lang.sysmlparts._symboltable.AttributeUsageSymbol",
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.AttributeUsageSymbol",
                   "name": "val",
                   "fullName":"RoughPartDef.BooleanOutput.val",
                   "types": [

@@ -3,7 +3,7 @@
   "name": "PortDefinitions",
   "symbols": [
     {
-      "kind": "de.monticore.lang.sysmlimportsandpackages._symboltable.SysMLPackageSymbol",
+      "kind": "de.monticore.lang.sysmlbasis._symboltable.SysMLPackageSymbol",
       "name": "PortDefinitions",
       "fullName":"PortDefinitions",
       "spannedScope": {
@@ -15,7 +15,7 @@
             "spannedScope": {
               "symbols": [
                 {
-                  "kind": "de.monticore.lang.sysmlparts._symboltable.AttributeUsageSymbol",
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.AttributeUsageSymbol",
                   "name": "val",
                   "fullName":"PortDefinitions.BooleanInput.val",
                   "types": [
@@ -36,7 +36,7 @@
             "spannedScope": {
               "symbols": [
                 {
-                  "kind": "de.monticore.lang.sysmlparts._symboltable.AttributeUsageSymbol",
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.AttributeUsageSymbol",
                   "name": "val",
                   "fullName":"PortDefinitions.BooleanOutput.val",
                   "types": [

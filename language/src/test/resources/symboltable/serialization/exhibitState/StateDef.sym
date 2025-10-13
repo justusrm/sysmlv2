@@ -3,24 +3,24 @@
   "name": "StateDef",
   "symbols": [
     {
-      "kind": "de.monticore.lang.sysmlimportsandpackages._symboltable.SysMLPackageSymbol",
+      "kind": "de.monticore.lang.sysmlbasis._symboltable.SysMLPackageSymbol",
       "name": "StateDef",
       "fullName":"StateDef",
       "spannedScope": {
         "symbols": [
           {
-            "kind": "de.monticore.lang.sysmlstates._symboltable.StateDefSymbol",
+            "kind": "de.monticore.lang.sysmlbasis._symboltable.StateDefSymbol",
             "name": "AutomatonInverter",
             "fullName":"StateDef.AutomatonInverter",
             "spannedScope": {
               "symbols": [
                 {
-                  "kind": "de.monticore.lang.sysmlstates._symboltable.StateUsageSymbol",
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.StateUsageSymbol",
                   "name": "S",
                   "fullName":"StateDef.AutomatonInverter.S"
                 },
                 {
-                  "kind": "de.monticore.lang.sysmlstates._symboltable.SysMLTransitionSymbol",
+                  "kind": "de.monticore.lang.sysmlbasis._symboltable.SysMLTransitionSymbol",
                   "name": "invert",
                   "fullName":"StateDef.AutomatonInverter.invert"
                 },
