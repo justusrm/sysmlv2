@@ -6,7 +6,7 @@
 
 plugins {
   id "de.monticore.generator" version "$mc_version"
-  id "com.github.johnrengelman.shadow" version "7.0.0"
+  id "com.gradleup.shadow" version "8.3.9"
   id "io.github.themrmilchmann.ecj" version "0.2.0"
 }
 
