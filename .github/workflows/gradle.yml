@@ -14,7 +14,7 @@ on:
 
 
 env:
-  GRADLE_VERSION: 7.4 # Gradle version used
+  GRADLE_VERSION: 8.14.4 # Gradle version used
   GRADLE_CLI_OPTS: "-Pci --build-cache " # CLI options passed to Gradle
 
 permissions:
